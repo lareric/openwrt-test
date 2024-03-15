@@ -18,7 +18,7 @@ index aef722dfdef5f..f18b648c371e2 100644
 -	if (chip->ecc.strength > 0 && chip->ecc.size > 0)
 -		return set_geometry_by_ecc_info(this, chip->ecc.strength,
 -						chip->ecc.size);
-+	if ((of_property_read_bool(this->dev->of_node, "fsl,use-chip-default-ecc"))
++	if (of_property_read_bool(this->dev->of_node, "fsl,use-chip-default-ecc")
 +		if (chip->ecc.strength > 0 && chip->ecc.size > 0)
 +			return set_geometry_by_ecc_info(this, chip->ecc.strength,
 +							chip->ecc.size);
